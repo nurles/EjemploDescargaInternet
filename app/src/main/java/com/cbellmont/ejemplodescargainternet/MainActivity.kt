@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity(), MainActivityInterface {
     }
 
     override suspend fun onFilmsReceived(listFilms : List<Film>) {
-        tvFilms.text = ""
         withContext(Dispatchers.Main){
+            tvFilms.text = ""
             listFilms.forEach {
                 tvFilms.append(it.toString())
             }
