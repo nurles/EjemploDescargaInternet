@@ -16,7 +16,8 @@ class GetAllFilms {
         suspend fun send(mainActivity : MainActivityInterface?) {
 
             val client = OkHttpClient()
-            val url = "https://swapi.dev/api/films/"
+            //val url = "https://swapi.dev/api/films/"
+            val url = "https://swapi.dev/api/people/"
             val request = Request.Builder()
                 .url(url)
                 .build()
